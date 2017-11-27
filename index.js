@@ -5,7 +5,7 @@ import { Route, Redirect } from 'react-router';
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
       rest.isAuthenticated ? (
-        <Component {...props}/>
+        <Component {...rest}/>
       ) : (
         <Redirect to={{
           pathname: rest.loginPath,
