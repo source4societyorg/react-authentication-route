@@ -4,28 +4,27 @@ import { Route, Redirect } from 'react-router';
 
 const findOne = (haystack, array) => array.some(v => haystack.indexOf(v) >= 0);
 
-const PrivateRoute = ({ component: Component, ...rest }) => ( 
+const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
-      (rest.accessRoles.length === 0 || findOne(rest.accessRoles, rest.userRoles)) ? (
-        rest.isAuthenticated ? (
-          <Component {...rest}/>
-        ) : (
-          <Redirect to={{
-            pathname: rest.loginPath,
-            state: { from: props.location },
-            push: props.push,
-          }}/>
-        )
+    (rest.accessRoles.length === 0 || findOne(rest.accessRoles, rest.userRoles)) ? (
+      rest.isAuthenticated ? (
+        <Component {...rest}/>
       ) : (
         <Redirect to={{
-          pathname: rest.accessDeniedPath,
+          pathname: rest.loginPath,
           state: { from: props.location },
           push: props.push,
         }}/>
       )
-    )}
-  />
-)
+    ) : (
+      <Redirect to={{
+        pathname: rest.accessDeniedPath,
+        state: { from: props.location },
+        push: props.push,
+      }}/>
+    )
+  )}/>
+);
 
 PrivateRoute.defaultProps = {
   push: true,
