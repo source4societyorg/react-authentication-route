@@ -52,7 +52,7 @@ PrivateRoute.propTypes = {
   adminPath: PropTypes.string,
   accessDeniedPath: PropTypes.string,
   isAuthenticated: PropTypes.bool,
-  component: PropTypes.object,
+  component: PropTypes.any,
 };
 
 export default PrivateRoute;
