@@ -1,30 +1,26 @@
 # react-authentication-route
-Provides a component to wrap a react-router route and perform authentication checks with a prop based isAuthenticated flag and redirects to prop provided login component if not authenticated.
 
-Inspired by [reacttrainings react-router example auth workflow](https://reacttraining.com/react-router/web/example/auth-workflow)
+Provides a container to wrap a react-router route and perform authentication checks with a prop based isAuthenticated flag and redirects to prop provided login component if not authenticated.
 
-## Requirements
+[![scepter-logo](http://res.cloudinary.com/source-4-society/image/upload/v1519221119/scepter_hzpcqt.png)](https://github.com/source4societyorg/SCEPTER-core)
 
-Please be sure you have the following in your package.json:
+[![airbnb-codestyle](https://camo.githubusercontent.com/1c5c800fbdabc79cfaca8c90dd47022a5b5c7486/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64652532307374796c652d616972626e622d627269676874677265656e2e7376673f7374796c653d666c61742d737175617265)](https://github.com/airbnb/javascript)
 
-   "dependencies": {
-     "babel-polyfill": "6.23.0",
-     "prop-types": "15.5.10",
-     "react": "15.6.1",
-     "react-router-dom": "4.1.1",
-   }
+[![Build Status](https://travis-ci.org/source4societyorg/react-authentication-route.svg?branch=master)](https://travis-ci.org/source4societyorg/react-authentication-route)
+
+[![codecov](https://codecov.io/gh/source4societyorg/react-authentication-route/branch/master/graph/badge.svg)](https://codecov.io/gh/source4societyorg/react-authentication-route)
+
+Inspired by [reacttrainings react-router example auth workflow](https://reacttraining.com/react-router/web/example/auth-workflow).
+
+Can work hand in hand with [react-authapp-container](https://github.com/source4societyorg/react-authapp-container). By adding this route to your application's shell you will be able to easily redirect to the login page if the user has yet to authenticate.
 
 ## Installation
 
-Pleas be sure you have the requirements mentioned in the previous section installed.
+    npm install @source4society/react-authentication-route
 
-We recommending forking this repository and using as a submodule. To use as a git submodule in your project, navigate to your containers directory and run:
+or
 
-    git submodule add git@github.com:source4societyorg/react-authentication-route.git PrivateRoute
-
-Replace the url with the url of your fork as needed.
-
-For more information on how to use submodules, refer to the [git submodule reference](https://git-scm.com/docs/git-submodule) and this article from [TechJini](http://www.techjini.com/blog/working-with-git-submodules/)
+    yarn add @source4society/react-authentication-route
 
 ## Example
 
